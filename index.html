@@ -3,7 +3,8 @@
 <head>
 	<title>My Resume</title>
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+	<meta name="viewport" content="width = device-width,inital-scale=1.0,maximun = 1.0,user-scalable = no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
@@ -22,24 +23,38 @@
 				<a class="navbar-brand page-scroll" href="#page-top">Phoebe的简历</a>
 			</div>
 			<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-				<ul class="nav navbar-nav">
-					<li class="hidden"><a href="#page-top"></a></li>    <!-- 有疑问，作用? -->
-					<li><a class="page-scroll" href="#about">简介</a></li>
-					<li><a class="page-scroll" href="#master">技能掌握</a></li>
-					<li><a class="page-scroll" href="#works">我的作品</a></li>
-					<li><a class="page-scroll" href="#experience">个人履历</a></li>
-					<li><a class="page-scroll" href="#contact">联系我</a></li>
+				<ul id="topBar" class="nav navbar-nav">
+					<li class="hidden" mark="#page-top"><a href="#page-top" index="0"></a></li>
+					<li mark="#about"><a class="page-scroll" href="#about" index="1">简介</a></li>
+					<li  mark="#master"class="master-choose"><a class="page-scroll" href="#master" index="2">技能掌握</a></li>
+					<li mark="#works"><a class="page-scroll" href="#works" index="3">我的作品</a></li>
+					<li mark="#experience"><a class="page-scroll" href="#experience" index="4">个人履历</a></li>
+					<li mark="#contact"><a class="page-scroll" href="#contact" index="5">联系我</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	<!-- 右侧导航 -->	
+	<div class="right-nav">
+		<div class="right-nav-box">
+			<ul>
+				<li><a class="page-scroll" href="#page-top"></a></li>
+				<li><a class="page-scroll" href="#about"></a></li>
+				<li class="master-choose"><a class="page-scroll" href="#master"></a></li>
+				<li><a class="page-scroll" href="#works"></a></li>
+				<li><a class="page-scroll" href="#experience"></a></li>
+				<li><a class="page-scroll" href="#contact"></a></li>
+			</ul>
+		</div>
+	</div>
 
 
 	<!-- 首页 -->
 	<div class="head-container">
 		<div class="head-box">
 			<div class="logo">
-				<h1>Hello&nbsp;&nbsp;Word!</h1>
+				<h1 style="opacity: 0;">Hello word!<br>Hello I'm Phoebe!<br>I want to be a programer!<br>Here we go!</h1>
 			</div>
 			<div class="go">
 				<a href="#about" class="page-scroll btn btn-circle go-btn"><div class="goo animated"><span class="iconfont">&#xe612;</span></div></a>
@@ -54,7 +69,7 @@
 			<div class="container">
 				<div class="section-title"><h2>&nbsp;关于我&nbsp;</h2></div>
 				<div class="row about-info-box">
-					<div class="col-md-3 col-sm-6 about-box">
+					<div class="col-md-3 col-sm-6 about-box" style="opacity: 1;z-index: 5;">
 						<span class="iconfont about-logo animated">&#xe602;</span>
 						<h4><strong>个人信息</strong></h4>
 						<p>英文名/Phoebe<br>性别/女&nbsp;&nbsp;年龄/25<br></p>
@@ -77,6 +92,14 @@
 						<h4><strong>兴趣爱好</strong></h4>
 						<p>摄影、跑步、羽毛球<br><br></p>
 					</div>
+					<div id="aboutChoose" class="about-choose">
+						<ul>
+							<li class="now" index="0"></li>
+							<li index="1"></li>
+							<li index="2"></li>
+							<li index="3"></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -84,36 +107,60 @@
 
 	<!-- 技能掌握 -->
 	<div id="master" class="text-center">
-		<div class="container">
+		<div class="container master-container">
 			<div class="section-title"><h2>&nbsp;技能掌握&nbsp;</h2></div>
 			<div class="master-pic">
-				<div class="master1 master-box"><h4>&nbsp;&nbsp;&nbsp;基&nbsp;&nbsp;础&nbsp;&nbsp;&nbsp;</h4>
-					<span style="background: yellow;padding-right: 100px;">&nbsp;&nbsp;HTML</span>
-					<span style="background: #31b2ed;padding-right: 100px;">&nbsp;&nbsp;CSS</span>
-					<span style="background: #d21c23;padding-right: 100px;">&nbsp;&nbsp;Javascript</span>
-					<span style="background: #c0d55a;padding-right: 100px;">&nbsp;&nbsp;ES6</span>
+				<div class="master-cover"></div>
+				<div class="master1 master-box" style="opacity: 1;"><h4>&nbsp;&nbsp;&nbsp;基&nbsp;&nbsp;础&nbsp;&nbsp;&nbsp;</h4>
+					<span style="background: yellow;padding-right: 90px;width: 150px;">&nbsp;&nbsp;HTML</span>
+					<span style="background: #31b2ed;padding-right: 100px;width: 140px;">&nbsp;&nbsp;CSS</span>
+					<span style="background: #d21c23;padding-right: 110px;width: 190px;">&nbsp;&nbsp;Javascript</span>
+					<span style="background: #c0d55a;padding-right: 75px;width: 110px;">&nbsp;&nbsp;ES6</span>
+					<div class="master-intro">
+						<div clsss="intro-text">能使用HTML+CSS+原生JS进行页面开发，掌握ES6语法</div>
+					</div>
 				</div>
 				<div class="master2 master-box"><h4>&nbsp;技&nbsp;术&nbsp;栈&nbsp;</h4>
-					<span style="background: #c0d55a;padding-right: 100px;">&nbsp;&nbsp;JQuery</span>
-					<span style="background: #d21c23;padding-right: 100px;">&nbsp;&nbsp;Vue</span>
-					<span style="background: #31b2ed;padding-right: 100px;">&nbsp;&nbsp;小程序</span>
+					<span style="background: #c0d55a;padding-right: 60px;width: 110px;">&nbsp;&nbsp;JQuery</span>
+					<span style="background: #d21c23;padding-right: 150px;width: 140px;">&nbsp;&nbsp;Vue</span>
+					<span style="background: #31b2ed;padding-right: 80px;width: 140px;">&nbsp;&nbsp;小程序</span>
+					<div class="master-intro">
+						<div clsss="intro-text">熟悉运用Vue全家桶，掌握JQuery及原生小程序开发</div>
+					</div>
 				</div>
 				<div class="master3 master-box"><h4>&nbsp;UI&nbsp;框&nbsp;架&nbsp;</h4>
-					<span style="background: #c0d55a;padding-right: 100px;">&nbsp;&nbsp;Element UI</span>
-					<span style="background: #de8c52;padding-right: 100px;">&nbsp;&nbsp;Bootstrap</span>
+					<span style="background: #c0d55a;padding-right: 32px;width: 130px;">&nbsp;&nbsp;Element UI</span>
+					<span style="background: #de8c52;padding-right: 38px;width: 110px;">&nbsp;&nbsp;Bootstrap</span>
+					<div class="master-intro">
+						<div clsss="intro-text">能使用Element UI、Bootstrap等UI框架快速开发页面，能结合媒体查询开发响应式布局页面</div>
+					</div>
 				</div>
+				<br>
 				<div class="master4 master-box"><h4>后台交互</h4>
-					<span style="background: #31b2ed;padding-right: 100px;">&nbsp;&nbsp;Ajax</span>
-					<span style="background: #c0d55a;padding-right: 100px;">&nbsp;&nbsp;Socket</span>
+					<span style="background: #31b2ed;padding-right: 90px;width: 140px;">&nbsp;&nbsp;Ajax</span>
+					<span style="background: #c0d55a;padding-right: 80px;width: 110px;">&nbsp;&nbsp;Socket</span>
+					<div class="master-intro">
+						<div clsss="intro-text">掌握Ajax、Socket即时通信与后台交互，熟悉网络通讯协议</div>
+					</div>
 				</div>
 				<div class="master5 master-box"><h4>相关技能</h4>
-					<span style="background: #31b2ed;padding-right: 100px;">&nbsp;&nbsp;Webpack</span>
-					<span style="background: #d21c23;padding-right: 100px;">&nbsp;&nbsp;Github</span>
-					<span style="background: #c0d55a;padding-right: 100px;">&nbsp;&nbsp;Photoshop</span>
+					<span style="background: #31b2ed;padding-right: 52px;width: 140px;">&nbsp;&nbsp;Webpack</span>
+					<span style="background: #d21c23;padding-right: 126px;width: 140px;">&nbsp;&nbsp;Github</span>
+					<span style="background: #c0d55a;padding-right: 45px;width: 110px;">&nbsp;&nbsp;Photoshop</span>
+					<div class="master-intro">
+						<div clsss="intro-text">对Github运用熟悉，能使用Github进行团队代码开发，掌握Wepack打包技术、Photoshop切图及简单修图工作</div>
+					</div>
 				</div>
-				<div class="master-intro">
-					<div id="introText" clsss="intro-text">这是一些介绍</div>
-				</div>
+
+				<div id="masterChoose" class="master-choose">
+						<ul>
+							<li class="now" index="0"></li>
+							<li index="1"></li>
+							<li index="2"></li>
+							<li index="3"></li>
+							<li index="4"></li>
+						</ul>
+					</div>
 			</div>
 		</div>
 	</div>
@@ -126,12 +173,12 @@
 		<div class="container">
 			<div class="section-title"><h2>&nbsp;我的作品&nbsp;</h2></div>
 			<div class=works-box>
-				<div class="col-sm-6 col-md-3 col-lg-3">
+				<div class="col-sm-6 col-md-3 col-lg-3 works-item-box" style="opacity: 1;z-index: 5;">
 					<div class="works-item">
 						<div class="hover-bg">
 							<div class="hover-text">
 								<h4>棒棒团学习网站</h4>
-								<small>Vue+Elment UI</small><br>
+								<small>Vue+Elment UI，已上线</small><br>
 								<!-- <div><a href="">查看</a></div> -->
 								<div><a href="http://bangdna.com/#/signin" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
 							</div>
@@ -140,7 +187,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
+				<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
 					<div class="works-item">
 						<div class="hover-bg">
 							<div class="hover-text">
@@ -153,83 +200,97 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="works-item">
-						<div class="hover-bg">
-							<div class="hover-text">
-								<h4>公益单车</h4>
-								<small>原生小程序开发</small><br>
-								<div><a href="" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+					<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
+						<div class="works-item">
+							<div class="hover-bg">
+								<div class="hover-text">
+									<h4>公益单车</h4>
+									<small>原生小程序开发</small><br>
+									<div><a href="" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+								</div>
+								<img src="image/works3.jpg" class="works-image"/>
 							</div>
-							<img src="image/works3.jpg" class="works-image"/>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="works-item">
-						<div class="hover-bg">
-							<div class="hover-text">
-								<h4>猿计划网站</h4>
-								<small>Vue+quill-editor富文本</small><br>
-								<div><a href="http://www.silvermoon.site/program-project/" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+					<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
+						<div class="works-item">
+							<div class="hover-bg">
+								<div class="hover-text">
+									<h4>猿计划网站</h4>
+									<small>Vue+quill-editor富文本</small><br>
+									<div><a href="http://www.silvermoon.site/program-project/" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+								</div>
+								<img src="image/works0.png" class="works-image"/>
 							</div>
-							<img src="image/works0.png" class="works-image"/>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="works-item">
-						<div class="hover-bg">
-							<div class="hover-text">
-								<h4>我的简历(本网站)</h4>
-								<small>JQuery+Bootstrap</small><br>
-								<div><a href="http://www.silvermoon.site/Hello-World/" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+					<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
+						<div class="works-item">
+							<div class="hover-bg">
+								<div class="hover-text">
+									<h4>我的简历(本网站)</h4>
+									<small>JQuery+Bootstrap</small><br>
+									<div><a href="http://www.silvermoon.site/Hello-World/" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+								</div>
+								<img src="image/works5.png" class="works-image"/>
 							</div>
-							<img src="image/works5.png" class="works-image"/>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="works-item">
-						<div class="hover-bg">
-							<div class="hover-text">
-								<h4>去哪儿网仿写</h4>
-								<small>Vue+搜索算法+函数截流</small><br>
-								<div><a href="http://www.silvermoon.site/whereToGo/#/city" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+					<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
+						<div class="works-item">
+							<div class="hover-bg">
+								<div class="hover-text">
+									<h4>去哪儿网仿写</h4>
+									<small>Vue+搜索算法+函数截流</small><br>
+									<div><a href="http://www.silvermoon.site/whereToGo/#/city" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+								</div>
+								<img src="image/works6.png" class="works-image"/>
 							</div>
-							<img src="image/works6.png" class="works-image"/>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="works-item">
-						<div class="hover-bg">
-							<div class="hover-text">
-								<h4>练手小Demo合辑</h4>
-								<small>原生JS+JQuery+Vue等</small><br>
-								<div><a href="" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+					<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
+						<div class="works-item">
+							<div class="hover-bg">
+								<div class="hover-text">
+									<h4>练手小Demo合辑</h4>
+									<small>原生JS+JQuery+Vue等</small><br>
+									<div><a href="" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+								</div>
+								<img src="image/1.jpg" class="works-image"/>
 							</div>
-							<img src="image/1.jpg" class="works-image"/>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="works-item">
-						<div class="hover-bg">
-							<div class="hover-text">
-								<h4>腾讯游戏页仿写</h4>
-								<small>原生JS实现轮播图等效果</small><br>
-								<div><a href="http://www.silvermoon.site/tencentgame/" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+					<div class="col-sm-6 col-md-3 col-lg-3 works-item-box">
+						<div class="works-item">
+							<div class="hover-bg">
+								<div class="hover-text">
+									<h4>腾讯游戏页仿写</h4>
+									<small>原生JS实现轮播图等效果</small><br>
+									<div><a href="http://www.silvermoon.site/tencentgame/" target="_blank"><span class="iconfont">&#xe69d;</span></a></div>
+								</div>
+								<img src="image/works00.png" class="works-image"/>
 							</div>
-							<img src="image/works00.png" class="works-image"/>
 						</div>
 					</div>
-				</div>
+
+					<div id="workChoose1" class="works-choose">
+						<ul>
+							<li class="now" index="0"></li>
+							<li index="1"></li>
+							<li index="2"></li>
+							<li index="3"></li>
+							<li index="4"></li>
+							<li index="5"></li>
+							<li index="6"></li>
+							<li index="7"></li>
+						</ul>
+					</div>
+			</div>
 			</div>
 		</div>
 		</div>
@@ -242,12 +303,13 @@
 		<div class="container">
 			<div class="section-title"><h2>&nbsp;个人履历&nbsp;</h2></div>
 			<div class="experience-box">
-				<div class="cross-line"></div>
+				<!-- <div class="cross-line"></div> -->
 				<div class="experience-item">
 					<div class="time"><h4 style="padding-left: 40px;">现在</h4></div>
 					<span class="circle-icon-big"></span>
+					<div class="cross-line"></div>
 					<div class="experience-detail">
-						<h4>“棒棒团公益团队成员”|前端开发</h4>
+						<h4>“棒棒团公益团队成员”<span class="cross-line-small">|</span><span>前端开发</span></h4>
 						<p>负责棒棒团公益门户网站及网站后台管理系统的前端开发、Bug修复<br></p>
 					</div>
 				</div>
@@ -256,7 +318,7 @@
 					<div class="time">2016<h4>07月</h4></div>
 					<span class="circle-icon"></span>
 					<div class="experience-detail">
-						<h4>中国移动|网络部|网络运行支撑管理</h4>
+						<h4>中国移动<span class="cross-line-small">|</span><span>网络部|网络运行支撑管理</span></h4>
 						<p>负责微/宏基站项目管理，主要职责为基站规划建设<br>管理10余家合作单位进行基站图纸设计、施工及验收</p>
 					</div>
 				</div>
@@ -265,7 +327,7 @@
 					<div class="time">2016<h4>06月</h4></div>
 					<span class="circle-icon"></span>
 					<div class="experience-detail">
-						<h4>毕业于华南师范大学|本科|电子信息科学与技术专业</h4>
+						<h4>毕业于华南师范大学<span class="cross-line-small">|</span><span>本科</span><span class="cross-line-small">|</span><span>电子信息科学与技术专业</span></h4>
 						<p>编程：自动电梯升降系统(C语言)、多功能数学运算系统(Java)、 基于深度学习的文本分类(Matlab)<br>
 						   证书：英语四/六级证书、计算机一/二级证书、移动互联网IT专业技能应用级（MITA）专项技术证书</p>
 					</div>
@@ -275,7 +337,7 @@
 					<div class="time">2015<h4>09月</h4></div>
 					<span class="circle-icon"></span>
 					<div class="experience-detail">
-						<h4>在华南师范大学附属中学实习|信息与通用技术实习教师</h4>
+						<h4>在华南师范大学附属中学实习<span class="cross-line-small">|</span><span>信息与通用技术实习教师</span></h4>
 						<p>实习3个月<br>除正常教学外，指导兴趣班学生开展Arduino自动控制升降系统项目，包括硬件设计及单片机编程</p>
 					</div>
 				</div>
@@ -304,42 +366,42 @@
 				</div>
 
 				<div class="logo-box">
-					<div class="contact-logo col-sm-4 col-md-2 col-lg-2">
+					<div class="contact-logo col-sm-2 col-md-2 col-lg-2 col-xs-4">
 						<a href="https://github.com/phoebeyuer" target="_blank">
 							<span class="tip-box">Github</span>
 							<span class="tip-triangle"></span>
 							<span class="iconfont">&#xea0a;</span>
 						</a>
 					</div>
-					<div class="contact-logo col-sm-4 col-md-2 col-lg-2">
+					<div class="contact-logo col-sm-2 col-md-2 col-lg-2 col-xs-4">
 						<a href="https://www.jianshu.com/u/39d93e9fb359" target="_blank">
 							<span class="tip-box" style="width: 50px;">简书</span>
 							<span class="tip-triangle"></span>
 							<span class="iconfont">&#xe689;</span>
 						</a>
 					</div>
-					<div class="contact-logo col-sm-4 col-md-2 col-lg-2">
+					<div class="contact-logo col-sm-2 col-md-2 col-lg-2 col-xs-4">
 						<a href="https://tuchong.com/3183516/" target="_blank">
 							<span class="tip-box" style="width: 80px;">图虫相册</span>
 							<span class="tip-triangle"></span>
 							<span class="iconfont">&#xe69d;</span>
 						</a>
 					</div>
-					<div class="contact-logo col-sm-4 col-md-2 col-lg-2">
+					<div class="contact-logo col-sm-2 col-md-2 col-lg-2 col-xs-4">
 						<a href="javascript: avoid(0);" target="_blank">
 							<span class="tip-box">420306625@qq.com</span>
 							<span class="tip-triangle"></span>
 							<span class="iconfont">&#xe605;</span>
 						</a>
 					</div>
-					<div class="contact-logo col-sm-4 col-md-2 col-lg-2">
+					<div class="contact-logo col-sm-2 col-md-2 col-lg-2 col-xs-4">
 						<a href="javascript: avoid(0);" alt="420306625">
 							<span class="tip-box">420306625</span>
 							<span class="tip-triangle"></span>
 							<span class="iconfont">&#xe62b;</span>
 						</a>
 					</div>
-					<div class="contact-logo col-sm-4 col-md-2 col-lg-2">
+					<div class="contact-logo col-sm-2 col-md-2 col-lg-2 col-xs-4">
 						<a href="" target="_blank">
 							<span class="tip-box" style="width: 50px;">简历</span>
 							<span class="tip-triangle"></span>
