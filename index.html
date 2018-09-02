@@ -15,7 +15,7 @@
 
 	<!-- 导航条 -->
 	<nav class="navbar navbar-custom navbar-fixed-top">
-		<div class="container">
+		<div class="container" style="opacity: 0;">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 					<span class="iconfont">&#xe64f;</span>
@@ -35,8 +35,14 @@
 		</div>
 	</nav>
 
+	<div id="loadAction">
+		<div class="load-bg">
+			<div class="spinner"></div>
+		</div>
+	</div>
+
 	<!-- 右侧导航 -->	
-	<div class="right-nav">
+	<div class="right-nav" style="opacity: 0;">
 		<div class="right-nav-box">
 			<ul>
 				<li><a class="page-scroll" href="#page-top"></a></li>
@@ -58,6 +64,7 @@
 			</div>
 			<div class="go">
 				<a href="#about" class="page-scroll btn btn-circle go-btn"><div class="goo animated"><span class="iconfont">&#xe612;</span></div></a>
+				<h5 style="color: white;padding-top: 15px;font-size: 14px;width: 80px;font-weight: 600;">开始探索！</h5>
 			</div>
 		</div>
 	</div>

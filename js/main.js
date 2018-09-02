@@ -1,6 +1,7 @@
 function main() {
 
 (function() {
+	console.log('我是main函数，开始执行');
 	document.body.parentNode.style.overflowY = "hidden";
 	$("body").parent().css("overflow-y","hidden");
 
@@ -58,10 +59,6 @@ function main() {
 	})
 
 	$(window).resize(function () {          //当浏览器大小变化时
-	    // console.log($(window).height());          //浏览器时下窗口可视区域高度
-	    // console.log($(document).height());        //浏览器时下窗口文档的高度
-	    // console.log($(document.body).height());   //浏览器时下窗口文档body的高度
-	    // console.log($(document.body).outerHeight(true)); //浏览器时下窗口文档body的总高度 包括border padding margin
     	var position = $('.navbar #topBar li').filter('.active').attr('mark');
     	var tempindex = $('.navbar #topBar li').filter('.active').index();
     	temp = tempindex;
@@ -185,3 +182,14 @@ function main() {
 }
 
 main();
+
+$(window).ready(function(){
+	console.log('ready正在加载');
+})
+
+$(window).on("load",function(){
+	console.log("所有页面已加载完");
+	$('#loadAction').css('display','none');
+	$('.right-nav').css('opacity','1');
+	$('.navbar .container').css('opacity',1);
+});
