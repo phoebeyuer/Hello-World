@@ -191,5 +191,6 @@ $(window).on("load",function(){
 	console.log("所有页面已加载完");
 	$('#loadAction').css('display','none');
 	$('.right-nav').css('opacity','1');
-	$('.navbar .container').css('opacity',1);
+	$('.head-container').css('opacity','1')
+	$('.navbar .container').css('opacity','1');
 });
