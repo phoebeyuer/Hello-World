@@ -1097,13 +1097,7 @@ ul,ol {
 }
 
 #contact {
-	/*padding: 100px 0;*/
-	background: url('./../image/bg2.jpg') no-repeat top center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-	background-attachment: fixed;
+	background: rgba(255,255,255,0.2);
 }
 
 #contact .contact-bg {
