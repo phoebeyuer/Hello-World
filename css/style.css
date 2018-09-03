@@ -61,6 +61,21 @@ ul,ol {
 	font-weight: 600;
 }
 
+@media screen and (max-width:768px){
+.section-title h2 {
+	margin-top: -10px;
+	margin-bottom: 0;
+}
+
+.choose-btn {
+	margin-top: -15px;
+}
+
+#workChoose1 {
+	margin-top: -30px;
+}
+}
+
 /*加载动画*/
 .right-nav,.head-container{
 	-webkit-transition: all 2s ease-in-out;
@@ -671,9 +686,17 @@ ul,ol {
 	display: none;
 }
 
+#master .master-pic .master-cover {
+	display: none;
+}
+
 #master .master-pic {
 	position: relative;
 	overflow: visible;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	/*width: 100%;*/
 }
 
 #master .master-choose {
@@ -1257,6 +1280,7 @@ ul,ol {
 #contact .logo-box {
 	margin-top: -10px;
 }
+
 
 }
 
