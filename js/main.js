@@ -160,6 +160,8 @@ function main() {
 				return;
 			}
 			temp--;
+			$('.right-nav ul li a').attr('class','page-scroll');
+			$('.right-nav ul li a').eq(temp).addClass('now');
 			$('html,body').animate({
 				scrollTop: $(tempClass[temp]).offset().top
 			},900);
@@ -169,6 +171,8 @@ function main() {
 			if(temp === 5) {
 				return;
 			}
+			$('.right-nav ul li a').attr('class','page-scroll');
+			$('.right-nav ul li a').eq(temp + 1).addClass('now');
 			temp++;
 			$('html,body').animate({
 				scrollTop: $(tempClass[temp]).offset().top
