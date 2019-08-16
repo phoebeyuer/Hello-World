@@ -384,6 +384,12 @@ ul,ol {
 }
 }
 
+/*每一页的布局*/
+.text-center {
+	height: 100vh;
+}
+
+
 /*简介模块样式*/
 #about {
 	color: #fff;
@@ -398,6 +404,7 @@ ul,ol {
 #about .about-bg {
 	padding: 100px 0;
 	background: rgba(0,0,0,0.5);
+	height: 100vh;
 }
 
 #about .about-info-box {
@@ -533,7 +540,7 @@ ul,ol {
 }
 
 #about .about-bg{
-	height: 100%;
+	/*height: 100%;*/
 }
 
 #about .about-info-box {
@@ -766,6 +773,7 @@ ul,ol {
 #works .works-bg {
 	padding: 100px 0;
 	background: rgba(0,0,0,0.5);
+	height: 100vh;
 }
 
 #works .works-box {
@@ -864,7 +872,7 @@ ul,ol {
 }
 
 #works .works-bg{
-	height: 100%;
+	/*height: 100%;*/
 }
 
 #works .works-box {
@@ -1125,6 +1133,7 @@ ul,ol {
 
 #contact .contact-bg {
 	background: rgba(0,0,0,0.5);
+	height: 100vh;
 }
 
 #contact .container {
